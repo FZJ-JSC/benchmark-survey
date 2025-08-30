@@ -9,13 +9,15 @@ rajaperf:
     stream:
       name: STREAM
       tags: [memory-access-characteristics:regular-memory-access, programming-model:kokkos]  # inline lists are a little more space-efficient
-      notes: "See the dedicated entry"
+      notes: "See dedicated entry"
     polybench:
       name: PolyBench
+      notes: "See dedicated entry"
     lcals:
       name: LCALS
       # longname: Livermore Compiler Analysis Loop Suite
       tags: [programming-model:kokkos, memory-access-characteristics:regular-memory-access]
+      notes: "See dedicated entry"
     comm:
       name: Halo Communication
     basic:
@@ -357,13 +359,16 @@ benchmarks:
     notes: "High Performance Conjugate Gradients is a complement to Linpack (HPL)"
   polybench:
     name: PolyBench
-    url: https://web.cs.ucla.edu/~pouchet/software/polybench/
+    url: https://sourceforge.net/projects/polybench/
+    notes: "A benchmark suite of 30 numerical computations with static control flow, extracted from operations in various application domains. Last commit in 2018."
+    tags: [programming-language:c, programming-language:fortran, benchmark-scale:single-node]
   stream:
     name: STREAM
     license: free #https://www.cs.virginia.edu/stream/FTP/Code/LICENSE.txt
     url: https://www.cs.virginia.edu/stream/
     ref: mcalpin1996 #https://www.cs.virginia.edu/stream/ref.html#citing: Memory Bandwidth and Machine Balance in Current High Performance  Computers
     tags: [programming-language:c, programming-language:fortran, benchmark-scale:single-node, memory-access-characteristics:regular-memory-access]
+    notes: "Simple synthetic benchmark program that measures sustainable memory bandwidth (in MB/s) and the corresponding computation rate for simple vector kernels."
   babelstream:
     name: BabelStream
     license: free # based on STREAM's license: https://github.com/UoB-HPC/BabelStream?tab=License-1-ov-file#readme
@@ -391,10 +396,13 @@ benchmarks:
     name: b_eff
     url: https://fs.hlrs.de/projects/par/mpi/b_eff
     tags: [communication:mpi, benchmark-scale:large-scale, communication-performance-characteristics:network-latency-bound, communication-performance-characteristics:network-bandwidth-bound]
+    license: proprietary
+    notes: "MPI benchmark for measuring effective accumulated bandwidth in a network; several message sizes, communication patterns and methods used."
   lcals:
     name: LCALS
-    url: https://codesign.llnl.gov/LCALS.php
+    url: https://proxyapps.exascaleproject.org/app/lcals/
     tags: [benchmark-scale:single-node, programming-language:c++]
+    notes: "Livermore Compiler Analysis Loop Suite, a collection of loop kernels based, in part, on historical Livermore Loops benchmarks. Original website currently not reachable."
   graph500:
     name: Graph500
     url: https://graph500.org
@@ -506,8 +514,7 @@ benchpark:
       tags: [benchmark-scale:large-scale, programming-language:c, communication:mpi, communication-performance-characteristics:network-bandwidth-bound, communication-performance-characteristics:network-bisection-bandwidth-bound, communication-performance-characteristics:network-collectives, communication-performance-characteristics:network-latency-bound]
       license: Apache-2.0
       url: https://github.com/netbench/GPCNET
-      ref: 10.1145/3295500.3356215
-      notes: "Global Performance and Congestion Network Tests."
+      notes: "See dedicated entry."
     bpgromacs:
       name: GROMACS
       license: LGPL-2.1
@@ -719,6 +726,7 @@ ats-5:
   tags: [programming-model:openmp, programming-language:c++, programming-language:fortran, communication:mpi]
   license: none
   url: https://lanl.github.io/benchmarks/
+  notes: "Suite for the procurement of the fifth version of the Advanced Technology System by LANL/NNSA with representative workloads of the centers."
   benchmarks:
     branson:
       name: Branson
@@ -757,6 +765,7 @@ olcf-6:
   tags: [programming-model:openmp, programming-language:c++, programming-language:fortran, communication:mpi]
   license: none
   url: https://www.olcf.ornl.gov/draft-olcf-6-technical-requirements/benchmarks
+  notes: "Suite for procurement of the next ORNL supercomputer (post-exascale), developed to capture the programming models, programming languages, numerical motifs, fields of science, and other modalities of investigation expected to make up the bulk of the usage upon deployment."
   benchmarks:
     lammps:
       name: LAMMPS
