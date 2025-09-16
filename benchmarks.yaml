@@ -1015,7 +1015,7 @@ ueabs:
       license: Proprietary
       url: https://www.nemo-ocean.eu/
       ref: 10.5281/zenodo.8167700
-      tags: [application-domain:climate, programming-language:c++, programming-model:cuda]
+      tags: [application-domain:climate, programming-language:fortran, programming-model:cuda, communication:mpi]
       notes: "NEMO is a mathematical modelling framework for prediction in ocean and climate sciences. Free software."
     pfarm:
       name: PFARM
