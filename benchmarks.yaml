@@ -482,6 +482,12 @@ benchmarks:
     ref: 10.2172/1117905
     tags: [programming-language:c, communication:mpi, programming-language:c++, programming-model:openmp, programming-model:openmp-target, programming-model:cuda, programming-model:openacc, programming-model:pstl, application-domain:physics, application-domain:cfd, mesh-representation:unstructured-grid, method-type:hydrodynamics, method-type:lagrangian]
     notes: "Suite of proxy apps for 3D Lagrangian hydrodynamics on unstructured mesh. Current version is 2, but no update has happened in quite some time."
+  SPH-EXA:
+    name: SPH-EXA
+    url: https://github.com/sphexa-org/sphexa
+    license: MIT
+    tags: [programming-language:c++, application-domain:physics, application-domain:astrophysics, application-domain:cosmology, method-type:lagrangian, method-type:smoothed-particle-hydrodynamics, communication:mpi, programming-model:openmp, programming-model:cuda, programming-model:HIP, benchmark-scale:multi-node, benchmark-scale:large-scale]
+    notes: "Highly scalable and exascale-ready Smoothed Particle Hydrodynamics (SPH) code running on multi-GPU/node. SPH-EXA has 4 components: front-end, domain decomposition, modern SPH solver + other physics, and gravity solver. This code is the complete version of the SPH-EXA miniapp in the SPEC HPC 2021 suite."
 benchpark:
   name: "benchpark"
   tags: [programming-model:openmp, programming-model:cuda, programming-model:raja, programming-language:c++, programming-language:c, programming-language:python]
