@@ -4,6 +4,8 @@
 
 A survey of existing HPC benchmarks and benchmark suites. See also [benchmark taxonomy](https://github.com/LLNL/benchmark-taxonomy).
 
+The results have been gathered for the paper [_An HPC benchmark survey and taxonomy for characterization_](https://doi.org/10.1177/10943420251351424). See below for citing our work (repo, paper).
+
 The list of benchmarks collected here in a machine-readable manner is transformed into tables, like a TeX table for a paper or an interactive table hosted within the repository. Access the website at [https://fzj-jsc.github.io/benchmark-survey/](https://fzj-jsc.github.io/benchmark-survey/).
 
 ## Benchmark YAML Scheme
@@ -58,3 +60,11 @@ A GitHub action is setup to for validation, triggered on pushed on `benchmarks.y
 ## PDF
 
 The table can be converted into TeX syntax which we use in a paper. The script for conversionis available in `./tex-gen/`.
+
+## Citing
+
+The repository and the resulting website are outcome of the paper [_An HPC benchmark survey and taxonomy for characterization_](https://doi.org/10.1177/10943420251351424) ([arXiv](https://arxiv.org/abs/2509.08347)). Cite us the following:
+
+```
+Herten A, Pearce O, Guimarães FSM. An HPC benchmark survey and taxonomy for characterization. The International Journal of High Performance Computing Applications. 2026;40(1):42-51. doi:10.1177/10943420251351424
+```
